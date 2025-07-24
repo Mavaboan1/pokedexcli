@@ -30,6 +30,9 @@ func startRepl(cfg *config) {
 
 		command, exists := getCommands()[commandName]
 		if exists {
+			//if commandName == "explore" {
+			//
+			//}
 			err := command.callback(cfg, locationName)
 			if err != nil {
 				fmt.Printf("Command '%s' failed: %s\n", commandName, err)
